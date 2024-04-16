@@ -1,14 +1,12 @@
-function calcular() {
-    var numero1 = parseFloat(document.getElementById("numero1").value);
-    var operacao = document.getElementById("operacao").value;
-    var numero2 = parseFloat(document.getElementById("numero2").value);
-    var resultado = 0;
+function enviarFormulario(event) {
+    event.preventDefault(); // Impede o envio do formulário padrão
+    var formulario = document.getElementById("formulario");
+    var mensagem = document.getElementById("mensagem");
+    var dados = new FormData(formulario);
   
-    if (operacao === "soma") {
-      resultado = numero1 + numero2;
-    } else if (operacao === "subtracao") {
-      resultado = numero1 - numero2;
-    }
-  
-    document.getElementById("resultado").innerText = "Resultado: " + resultado;
+    // Enviar dados para o servidor (simulação)
+    setTimeout(function() {
+      mensagem.textContent = "O formulário foi enviado com sucesso!";
+      formulario.reset();
+    }, 1000);
   }
