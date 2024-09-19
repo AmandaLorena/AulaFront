@@ -1,0 +1,25 @@
+package org.example;
+
+public class EventoCorporativo extends Evento {
+    private String sala_de_conferencia;
+    private String Area_refeicao;
+
+    public EventoCorporativo(String Nome, String Data, String sala_de_conferencia, String area_refeicao) {
+        super(Nome, Data);
+        this.Area_refeicao = area_refeicao;
+        this.sala_de_conferencia = sala_de_conferencia;
+
+    }
+
+    public String getSala_de_conferencia() {
+        return sala_de_conferencia;
+    }
+
+    public String getArea_refeicao() {
+        return Area_refeicao;
+    }
+
+    public boolean validar() {
+        return true;
+    }
+}
