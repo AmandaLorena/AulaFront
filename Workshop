@@ -1,0 +1,27 @@
+package org.example;
+
+public class Workshop extends Evento{
+    private int addParticipante = 0;
+    private final int limite_participante = 30;
+
+    public Workshop(String nome, String data) {
+
+        super(nome, data);
+    }
+
+    public int getAddParticipante() {
+        return addParticipante;
+    }
+
+    public int getLimite_participante() {
+        return limite_participante;
+    }
+
+    public boolean inscreverParticipante(String s) {
+        if (addParticipante<limite_participante){
+            addParticipante++;
+            return true;
+        }
+        return false;
+    }
+}
