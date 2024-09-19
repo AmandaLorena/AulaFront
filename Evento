@@ -1,0 +1,11 @@
+package org.example;
+
+public class Evento {
+    private String Nome;
+    private String Data;
+
+    public Evento(String nome, String data) {
+        this.Nome = nome;
+        this.Data = data;
+    }
+}
